@@ -52,4 +52,7 @@
     <string name="action_last_app">Launch last app</string>
     <string name="action_splitscreen">Splitscreen</string>
 
+    <!-- AOSP-CAF Version -->
+    <string name="version_title">CAF Version</string>
+    <string name="version_default">Unknown</string>
 </resources>
