@@ -51,4 +51,7 @@
     <!-- AOSP-CAF Version -->
     <string name="version_title">CAF Version</string>
     <string name="version_default">Unknown</string>
+
+    <!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Google Play</string>
 </resources>
