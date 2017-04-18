@@ -48,6 +48,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
     private static final String TAG = "ConfigNotiSettings";
 
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
+    public static final String BATTERY_LIGHT_ENABLED = "battery_light_enabled";
     private static final String KEY_LOCK_SCREEN_NOTIFICATIONS = "lock_screen_notifications";
     private static final String KEY_LOCK_SCREEN_PROFILE_NOTIFICATIONS =
             "lock_screen_notifications_profile";
@@ -128,7 +129,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     final boolean val = (Boolean)newValue;
                     return Settings.System.putInt(getContentResolver(),
-                            Settings.System.NOTIFICATION_LIGHT_PULSE,
+                            Settings.System.BATTERY_LIGHT_ENABLED,
                             val ? 1 : 0);
                 }
             });

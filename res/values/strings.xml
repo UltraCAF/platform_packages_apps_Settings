@@ -6155,7 +6155,7 @@
     <string name="profile_section_header">Work notifications</string>
 
     <!-- Configure Notifications: Title for the pulse notification light option. [CHAR LIMIT=30] -->
-    <string name="notification_pulse_title">Pulse notification light</string>
+    <string name="notification_pulse_title">Battery light</string>
 
     <!-- Configure Notifications: Title for the option controlling notifications on the lockscreen. [CHAR LIMIT=30] -->
     <string name="lock_screen_notifications_title">On the lock screen</string>
