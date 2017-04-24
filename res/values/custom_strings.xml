@@ -63,4 +63,8 @@
     <string name="qs_night_bright_less">Set low brightness</string>
     <string name="qs_night_bright_medium">Set medium brightness</string>
     <string name="qs_night_bright_min">Set minimum brightness</string>
+
+    <!-- [CHAR LIMIT=100] Notification Importance slider: very low importance level description -->
+    <string name="notification_importance_very_low">No full screen interruption, peeking, sound, or vibration. Show at the bottom of the notification list. Hide from lock screen.</string>
+
 </resources>
