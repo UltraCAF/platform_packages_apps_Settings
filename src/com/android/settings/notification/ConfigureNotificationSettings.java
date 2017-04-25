@@ -147,6 +147,10 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
             Log.i(TAG, "Preference not found: " + BATTERY_LIGHT_ENABLED);
             return;
         }
+        if (!getResources()
+                .getBoolean(com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+            getPreferenceScreen().removePreference(mBatLight);
+        } else {
             updateBatteryLight();
             mBatLight.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 @Override
@@ -157,6 +161,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
                             val ? 1 : 0);
                 }
             });
+        }
     }
 
     private void updatePulse() {
