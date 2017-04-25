@@ -25,6 +25,13 @@
             android:title="@string/notification_pulse_title"
             android:defaultValue="true" />
 
+    <!-- Battery Charging light -->
+    <SwitchPreference
+            android:key="battery_light_enabled"
+            android:title="@string/Battery_light_title"
+            android:summary="@string/Battery_light_summary"
+            android:defaultValue="true" />
+
     <!-- When device is locked -->
     <com.android.settings.notification.RestrictedDropDownPreference
             android:key="lock_screen_notifications"

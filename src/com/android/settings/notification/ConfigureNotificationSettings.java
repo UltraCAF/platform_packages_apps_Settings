@@ -58,6 +58,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
     private Context mContext;
 
     private TwoStatePreference mNotificationPulse;
+    private TwoStatePreference mBatLight;
     private RestrictedDropDownPreference mLockscreen;
     private RestrictedDropDownPreference mLockscreenProfile;
     private boolean mSecure;
@@ -89,6 +90,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
         addPreferencesFromResource(R.xml.configure_notification_settings);
 
         initPulse();
+        initBatLight();
         initLockscreenNotifications();
 
         if (mProfileChallengeUserId != UserHandle.USER_NULL) {
@@ -129,11 +131,32 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     final boolean val = (Boolean)newValue;
                     return Settings.System.putInt(getContentResolver(),
-                            Settings.System.BATTERY_LIGHT_ENABLED,
+                            Settings.System.KEY_NOTIFICATION_PULSE,
                             val ? 1 : 0);
                 }
             });
         }
+    }
+
+    // === Battery Charging light ===
+
+    private void initBatLight() {
+        mBatLight =
+                (TwoStatePreference) getPreferenceScreen().findPreference(BATTERY_LIGHT_ENABLED);
+        if (mBatLight == null) {
+            Log.i(TAG, "Preference not found: " + BATTERY_LIGHT_ENABLED);
+            return;
+        }
+            updateBatteryLight();
+            mBatLight.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    final boolean val = (Boolean)newValue;
+                    return Settings.System.putInt(getContentResolver(),
+                            Settings.System.BATTERY_LIGHT_ENABLED,
+                            val ? 1 : 0);
+                }
+            });
     }
 
     private void updatePulse() {
@@ -145,6 +168,18 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
                     Settings.System.NOTIFICATION_LIGHT_PULSE) == 1);
         } catch (Settings.SettingNotFoundException snfe) {
             Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");
+        }
+    }
+
+    private void updateBatteryLight() {
+        if (mBatLight == null) {
+            return;
+        }
+        try {
+            mBatLight.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.BATTERY_LIGHT_ENABLED) == 1);
+        } catch (Settings.SettingNotFoundException snfe) {
+            Log.e(TAG, Settings.System.BATTERY_LIGHT_ENABLED + " not found");
         }
     }
 
