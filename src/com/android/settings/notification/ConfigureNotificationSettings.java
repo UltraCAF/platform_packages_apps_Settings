@@ -131,7 +131,7 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     final boolean val = (Boolean)newValue;
                     return Settings.System.putInt(getContentResolver(),
-                            Settings.System.KEY_NOTIFICATION_PULSE,
+                            Settings.System.NOTIFICATION_LIGHT_PULSE,
                             val ? 1 : 0);
                 }
             });
