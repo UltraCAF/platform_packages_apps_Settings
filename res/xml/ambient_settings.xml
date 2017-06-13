@@ -9,14 +9,14 @@
         android:summary="@string/doze_summary"
         android:persistent="false" />
 
-    <org.aospextended.extensions.preference.SystemSettingSwitchPreference
+    <SwitchPreference
         android:key="double_tap_wake_doze"
         android:title="@string/double_tap_wake_doze_title"
         android:summary="@string/double_tap_wake_doze_summary"
         android:defaultValue="true"
         android:dependency="doze" />
 
-    <org.aospextended.extensions.preference.SystemSettingSwitchPreference
+    <SwitchPreference
         android:key="doze_overwrite_value"
         android:title="@string/doze_overwrite_value_title"
         android:summary="@string/doze_overwrite_value_summary"
