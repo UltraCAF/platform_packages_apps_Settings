@@ -104,6 +104,10 @@
     <string name="device_doze_title">Ambient display gestures</string>
     <string name="device_doze_summary">Set up extra gestures for ambient display mode</string>
 
+    <!-- Double tap for doze -->
+    <string name="double_tap_wake_doze_title">Double-tap to wake on doze</string>
+    <string name="double_tap_wake_doze_summary">Require a double-tap to wake the device on a doze pulse screen</string>
+
     <!-- Doze pulse options -->
     <string name="doze_settings">Doze settings</string>
     <string name="summary_doze_enabled">Enabled</string>
