@@ -95,6 +95,17 @@
                 android:title="@string/version_title"
                 android:summary="@string/version_default"/>
 
+       <!-- About UltraCAF -->
+       <PreferenceScreen
+           android:key="about_rom"
+           android:title="@string/About_settings_title"
+           android:summary="@string/About_settings_summary">
+           <intent
+               android:action="com.android.settings.action.EXTRA_SETTINGS"
+               android:targetPackage="com.ultra.manager"
+               android:targetClass="com.ultra.manager.about.AboutActivity" />
+        </PreferenceScreen>
+
         <!-- Security patch level -->
         <PreferenceScreen android:key="security_patch"
                 android:title="@string/security_patch"

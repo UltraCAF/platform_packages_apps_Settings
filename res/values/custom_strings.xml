@@ -148,4 +148,8 @@
     <!-- Leds Options Settings -->
     <string name="leds_settings_title">Lights Options</string>
     <string name="leds_settings_summary">Manage your phone Battery/Notification Leds</string>
+
+    <!-- About UltraCAF -->
+    <string name="About_settings_title">About Us</string>
+    <string name="About_settings_summary">Get information about Us</string>
 </resources>
