@@ -19,18 +19,16 @@
         android:title="@string/configure_notification_settings"
         android:key="configure_notification_settings" >
 
-    <!-- Pulse notification light -->
-    <SwitchPreference
-            android:key="notification_pulse"
-            android:title="@string/notification_pulse_title"
-            android:defaultValue="true" />
-
-    <!-- Battery Charging light -->
-    <SwitchPreference
-            android:key="battery_light_enabled"
-            android:title="@string/Battery_light_title"
-            android:summary="@string/Battery_light_summary"
-            android:defaultValue="true" />
+    <!-- Lights Options -->
+    <PreferenceScreen
+        android:key="lights_options"
+        android:title="@string/leds_settings_title"
+        android:summary="@string/leds_settings_summary">
+        <intent
+            android:action="com.android.settings.action.EXTRA_SETTINGS"
+            android:targetPackage="com.ultra.manager"
+            android:targetClass="com.ultra.manager.lights.LedActivity" />
+    </PreferenceScreen>
 
     <!-- When device is locked -->
     <com.android.settings.notification.RestrictedDropDownPreference
