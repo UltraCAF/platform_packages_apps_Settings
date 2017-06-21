@@ -88,13 +88,6 @@
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
 
-        <!-- AOSP-CAF Version  -->
-        <Preference android:key="caf_version"
-                android:enabled="false"
-                android:shouldDisableView="false"
-                android:title="@string/version_title"
-                android:summary="@string/version_default"/>
-
        <!-- About UltraCAF -->
        <PreferenceScreen
            android:key="about_rom"
