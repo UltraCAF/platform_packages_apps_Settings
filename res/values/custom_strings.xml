@@ -146,6 +146,6 @@
     <string name="leds_settings_summary">Manage your phone Battery/Notification Leds</string>
 
     <!-- About UltraCAF -->
-    <string name="About_settings_title">About Us</string>
+    <string name="About_settings_title">About UltraCAF</string>
     <string name="About_settings_summary">Get information about Us</string>
 </resources>
