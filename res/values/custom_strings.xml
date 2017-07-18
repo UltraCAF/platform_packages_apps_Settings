@@ -122,49 +122,6 @@
     <!-- About UltraCAF -->
     <string name="About_settings_title">About UltraCAF</string>
     <string name="About_settings_summary">Get information about Us</string>
-=======
->>>>>>> parent of ac05d3d1e0... settings: Add buttons customization fragment
-=======
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
--->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="pa_version">Paranoid Android version</string>
-    <string name="pa_version_default">Unknown</string>
-
-    <string name="reset_all_settings">RESET ALL</string>
-    <string name="reset_selected_settings">RESET SELECTED</string>
-    <string name="reset_settings_title">Feature preferences</string>
-    <string name="reset_settings_summary">Reset Paranoid Android feature preferences</string>
-    <string name="keywords_settings_reset">reset</string>
-
-    <string name="volbtn_music_controls_title">Playback control</string>
-    <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
-
-    <!-- Status bar - Battery -->
-    <string name="battery_style_title">Battery status style</string>
-    <string name="battery_style_icon">Icon</string>
-    <string name="battery_style_circle">Circle</string>
-    <string name="battery_style_text">Text</string>
-    <string name="battery_style_hidden">Hidden</string>
-
-    <!-- Status bar - Battery percentage -->
-    <string name="battery_percentage_title">Battery percentage</string>
-    <string name="battery_percentage_default">Hidden (default)</string>
-    <string name="battery_percentage_text_inside">Inside the icon</string>
-    <string name="battery_percentage_text_next">Next to the icon</string>
-
-    <!-- sRGB -->
-    <string name="srgb_title">sRGB</string>
-    <string name="srgb_summary">Enable sRGB display calibration</string>
-
-    <!-- Night Display -->
-    <string name="night_display_warning">Please note that Night Light may increase battery consumption.</string>
-    <string name="night_display_hide">Do not show this warning</string>
-    <string name="night_display_ok">Ok</string>
 
     <!-- Buttons -->
     <string name="buttons_pref_title">Buttons</string>
@@ -196,4 +153,14 @@
     <string name="action_last_app">Launch last app</string>
     <string name="action_splitscreen">Splitscreen</string>
 
+    <!-- Hardware Keys -->
+    <string name="hardware_keys_action_nothing">No action</string>
+    <string name="hardware_keys_action_menu">Open/close menu</string>
+    <string name="hardware_keys_action_app_switch">Recent apps switcher</string>
+    <string name="hardware_keys_action_search">Search assistant</string>
+    <string name="hardware_keys_action_voice_search">Voice search</string>
+    <string name="hardware_keys_action_in_app_search">In-app search</string>
+    <string name="hardware_keys_action_sleep">Turn screen off</string>
+    <string name="hardware_keys_action_launch_camera">Open camera</string>
+    <string name="hardware_keys_action_last_app">Launch last app</string>
 </resources>
