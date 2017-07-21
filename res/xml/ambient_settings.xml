@@ -10,18 +10,20 @@
         android:defaultValue="true"
         android:persistent="false" />
 
-<!--    <SwitchPreference
+    <SwitchPreference
         android:key="double_tap_wake_doze"
         android:title="@string/double_tap_wake_doze_title"
         android:summary="@string/double_tap_wake_doze_summary"
         android:defaultValue="false"
-        android:dependency="doze" />
+        android:dependency="doze"
+        android:enabled="false" />
 
     <SwitchPreference
         android:key="doze_overwrite_value"
         android:title="@string/doze_overwrite_value_title"
         android:summary="@string/doze_overwrite_value_summary"
-        android:dependency="doze" />
+        android:dependency="doze"
+        android:enabled="false" />
 
     <PreferenceCategory
         android:key="doze_pulse_category"
@@ -59,5 +61,5 @@
             android:summary="@string/doze_pulse_duration_out_summary"
             android:persistent="false"
             android:dependency="doze_overwrite_value" />
-    </PreferenceCategory>-->
+    </PreferenceCategory>
 </PreferenceScreen>
