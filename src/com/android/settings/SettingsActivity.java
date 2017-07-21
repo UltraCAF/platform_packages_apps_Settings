@@ -140,6 +140,8 @@ import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
 
+import com.ultra.manager.UltraMan;
+
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
@@ -387,7 +389,8 @@ public class SettingsActivity extends SettingsDrawerActivity
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
             AmbientSettings.class.getName(),
-            ButtonsSettings.class.getName()
+            ButtonsSettings.class.getName(),
+            UltraMan.class.getName()
     };
 
 

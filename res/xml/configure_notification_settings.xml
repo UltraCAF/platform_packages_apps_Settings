@@ -23,12 +23,8 @@
     <PreferenceScreen
         android:key="lights_options"
         android:title="@string/leds_settings_title"
-        android:summary="@string/leds_settings_summary">
-        <intent
-            android:action="com.android.settings.action.EXTRA_SETTINGS"
-            android:targetPackage="com.ultra.manager"
-            android:targetClass="com.ultra.manager.lights.LedActivity" />
-    </PreferenceScreen>
+        android:summary="@string/leds_settings_summary"
+        android:fragment="com.ultra.manager.lights.LedFragment" />
 
     <!-- When device is locked -->
     <com.android.settings.notification.RestrictedDropDownPreference

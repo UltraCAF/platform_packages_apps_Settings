@@ -8024,4 +8024,7 @@
     <!-- Trigger Carrier Provisioning [CHAR LIMIT=NONE] -->
     <string name="trigger_carrier_provisioning">Trigger Carrier Provisioning</string>
 
+    <!-- UltraMan -->
+    <string name="ultraman_title">Ultra Manager Settings</string>
+    <string name="header_category_ultraman">Customization</string>
 </resources>
