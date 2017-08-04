@@ -19,13 +19,6 @@
         android:title="@string/configure_notification_settings"
         android:key="configure_notification_settings" >
 
-    <!-- Lights Options -->
-    <PreferenceScreen
-        android:key="lights_options"
-        android:title="@string/leds_settings_title"
-        android:summary="@string/leds_settings_summary"
-        android:fragment="com.ultra.manager.lights.LedFragment" />
-
     <!-- When device is locked -->
     <com.android.settings.notification.RestrictedDropDownPreference
             android:key="lock_screen_notifications"
