@@ -115,54 +115,9 @@
     <string name="doze_notification_color_invert_summary_off">Notifications will not be inverted. Use for dark themes.</string>
     <string name="doze_notification_color_invert_summary_on">Notifications will be inverted. Use for light/stock theme.</string>
 
-    <!-- Leds Options Settings -->
-    <string name="leds_settings_title">Lights Options</string>
-    <string name="leds_settings_summary">Manage your phone Battery/Notification Leds</string>
-
     <!-- About UltraCAF -->
     <string name="About_settings_title">About UltraCAF</string>
     <string name="About_settings_summary">Get information about Us</string>
-
-    <!-- Buttons -->
-    <string name="buttons_pref_title">Buttons</string>
-    <string name="buttons_pref_summary">Customize your device keys and buttons</string>
-    <string name="enable_navigation_bar_title">Enable software keys</string>
-    <string name="enable_navigation_bar_summary">Enable on-screen navigation keys</string>
-    <string name="swap_navigation_keys_title">Swap keys</string>
-    <string name="swap_navigation_keys_summary">Swap back and recents keys</string>
-    <string name="swap_slider_order_title">Swap slider</string>
-    <string name="swap_slider_order_summary">Swap the alert slider modes order</string>
-    <string name="hardware_brightness_keys_title">Backlight</string>
-    <string name="hardware_brightness_keys_summary">Enable navigation keys backlight</string>
-    <string name="home_key_title">Home button</string>
-    <string name="back_key_title">Back button</string>
-    <string name="menu_key_title">Menu button</string>
-    <string name="assist_key_title">Assist button</string>
-    <string name="app_switch_key_title">Recents button</string>
-    <string name="camera_key_title">Camera button</string>
-    <string name="short_press_title">Short press action</string>
-    <string name="long_press_title">Long press action</string>
-    <string name="double_tap_title">Double tap action</string>
-    <string name="action_nothing">No action</string>
-    <string name="action_menu">Open/close menu</string>
-    <string name="action_app_switch">Recents</string>
-    <string name="action_search">Search assistant</string>
-    <string name="action_voice_search">Voice search</string>
-    <string name="action_in_app_search">In-app search</string>
-    <string name="action_launch_camera">Open camera</string>
-    <string name="action_last_app">Launch last app</string>
-    <string name="action_splitscreen">Splitscreen</string>
-
-    <!-- Hardware Keys -->
-    <string name="hardware_keys_action_nothing">No action</string>
-    <string name="hardware_keys_action_menu">Open/close menu</string>
-    <string name="hardware_keys_action_app_switch">Recent apps switcher</string>
-    <string name="hardware_keys_action_search">Search assistant</string>
-    <string name="hardware_keys_action_voice_search">Voice search</string>
-    <string name="hardware_keys_action_in_app_search">In-app search</string>
-    <string name="hardware_keys_action_sleep">Turn screen off</string>
-    <string name="hardware_keys_action_launch_camera">Open camera</string>
-    <string name="hardware_keys_action_last_app">Launch last app</string>
 
     <!-- App Ops Settings -->
     <string name="app_ops_settings">App ops</string>
