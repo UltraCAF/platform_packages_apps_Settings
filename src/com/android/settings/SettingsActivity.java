@@ -126,6 +126,7 @@ import com.android.settings.search.Index;
 import com.android.settings.sim.SimSettings;
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
+import com.android.settings.caf.AmbientSettings;
 import com.android.settings.vpn2.VpnSettings;
 import com.android.settings.wfd.WifiDisplaySettings;
 import com.android.settings.widget.SwitchBar;
@@ -138,6 +139,8 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
+
+import com.ultra.manager.UltraMan;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -247,7 +250,6 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private CharSequence mInitialTitle;
     private int mInitialTitleResId;
-    private SmqSettings mSMQ;
 
     // Show only these settings for restricted users
     private String[] SETTINGS_FOR_RESTRICTED = {
@@ -262,7 +264,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.Lte4GEnableActivity.class.getName(),
             Settings.WirelessSettingsActivity.class.getName(),
             //device_section
-            Settings.ButtonsSettingsActivity.class.getName(),
             Settings.HomeSettingsActivity.class.getName(),
             Settings.SoundSettingsActivity.class.getName(),
             Settings.DisplaySettingsActivity.class.getName(),
@@ -386,7 +387,8 @@ public class SettingsActivity extends SettingsDrawerActivity
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
-            ButtonsSettings.class.getName()
+            AmbientSettings.class.getName(),
+            UltraMan.class.getName()
     };
 
 
@@ -575,8 +577,6 @@ public class SettingsActivity extends SettingsDrawerActivity
         if (intent.getBooleanExtra(EXTRA_HIDE_DRAWER, false)) {
             setIsDrawerPresent(false);
         }
-
-        mSMQ = new SmqSettings(getApplicationContext());
 
         mDevelopmentPreferences = getSharedPreferences(DevelopmentSettings.PREF_FILE,
                 Context.MODE_PRIVATE);
@@ -1064,14 +1064,6 @@ public class SettingsActivity extends SettingsDrawerActivity
     private Fragment switchToFragment(String fragmentName, Bundle args, boolean validate,
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
 
-        if (fragmentName.equals(getString(R.string.qtifeedback_intent_action))){
-             final Intent newIntent = new Intent(getString(R.string.qtifeedback_intent_action));
-             newIntent.addCategory("android.intent.category.DEFAULT");
-             startActivity(newIntent);
-             finish();
-             return null;
-        }
-
         if (LTE_4G_FRAGMENT.equals(fragmentName)) {
             Intent newIntent = new Intent("android.settings.SETTINGS");
             newIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -1102,6 +1094,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             SystemUpdateHandle ();
             return null;
         }
+
 
         if (validate && !isValidFragment(fragmentName)) {
             throw new IllegalArgumentException("Invalid fragment for this activity: "
@@ -1176,11 +1169,6 @@ public class SettingsActivity extends SettingsDrawerActivity
         final boolean isAdmin = um.isAdminUser();
 
         String packageName = getPackageName();
-        if(mSMQ.isShowSmqSettings()){
-            setTileEnabled(new ComponentName(packageName, Settings.SMQQtiFeedbackActivity.class.getName()),
-                mSMQ.isShowSmqSettings(), isAdmin, pm);
-        }
-
         setTileEnabled(new ComponentName(packageName, WifiSettingsActivity.class.getName()),
                 pm.hasSystemFeature(PackageManager.FEATURE_WIFI), isAdmin, pm);
 

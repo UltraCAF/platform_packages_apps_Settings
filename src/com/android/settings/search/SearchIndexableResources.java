@@ -18,7 +18,6 @@ package com.android.settings.search;
 
 import android.provider.SearchIndexableResource;
 
-import com.android.settings.ButtonsSettings;
 import com.android.settings.DateTimeSettings;
 import com.android.settings.DevelopmentSettings;
 import com.android.settings.DeviceInfoSettings;
@@ -329,12 +328,6 @@ public final class SearchIndexableResources {
                         ZenModeVisualInterruptionSettings.class.getName(),
                         R.drawable.ic_settings_notifications));
 
-        sResMap.put(ButtonsSettings.class.getName(),
-                new SearchIndexableResource(
-                        Ranking.getRankForClassName(ButtonsSettings.class.getName()),
-                        R.xml.buttons_settings,
-                        ButtonsSettings.class.getName(),
-                        R.drawable.ic_settings_buttons));
     }
 
     private SearchIndexableResources() {

@@ -160,13 +160,12 @@ public class Settings extends SettingsActivity {
     public static class TestingSettingsActivity extends SettingsActivity { /* empty */ }
     public static class WifiAPITestActivity extends SettingsActivity { /* empty */ }
     public static class WifiInfoActivity extends SettingsActivity { /* empty */ }
-    public static class SMQQtiFeedbackActivity extends SettingsActivity { /* empty */ }
 
     // Categories.
     public static class WirelessSettings extends SettingsActivity { /* empty */ }
     public static class DeviceSettings extends SettingsActivity { /* empty */ }
     public static class PersonalSettings extends SettingsActivity { /* empty */ }
     public static class SystemSettings extends SettingsActivity { /* empty */ }
-
-    public static class ButtonsSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class AmbientSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class UltraManActivity extends SettingsActivity { /* empty */ }
 }

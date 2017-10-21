@@ -3,7 +3,6 @@
 /*
 ** Copyright 2007 The Android Open Source Project
 ** Copyright (C) 2012-2015 The CyanogenMod Project
-** Copyright 2016 The ParanoidAndroid Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -23,32 +22,170 @@
     <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
 
-    <!-- Buttons -->
-    <string name="buttons_pref_title">Buttons</string>
-    <string name="buttons_pref_summary">Tweak the actions of your phones physical buttons</string>
-    <string name="enable_navigation_bar_title">Enable software keys</string>
-    <string name="enable_navigation_bar_summary">Enable on-screen navigation keys</string>
-    <string name="hardware_brightness_keys_title">Backlight</string>
-    <string name="hardware_brightness_keys_summary">Enable navigation keys backlight</string>
-    <string name="hardware_keys_home_key_title">Home button</string>
-    <string name="hardware_keys_back_key_title">Back button</string>
-    <string name="hardware_keys_menu_key_title">Menu button</string>
-    <string name="hardware_keys_assist_key_title">Assist button</string>
-    <string name="hardware_keys_app_switch_key_title">Recents button</string>
-    <string name="hardware_keys_camera_key_title">Camera button</string>
-    <string name="hardware_keys_short_press_title">Short press action</string>
-    <string name="hardware_keys_long_press_title">Long press action</string>
-    <string name="hardware_keys_double_tap_title">Double tap action</string>
-    <string name="hardware_keys_action_nothing">No action</string>
-    <string name="hardware_keys_action_menu">Open/close menu</string>
-    <string name="hardware_keys_action_app_switch">Recents</string>
-    <string name="hardware_keys_action_search">Search assistant</string>
-    <string name="hardware_keys_action_voice_search">Voice search</string>
-    <string name="hardware_keys_action_in_app_search">In-app search</string>
-    <string name="hardware_keys_action_launch_camera">Open camera</string>
-    <string name="hardware_keys_action_last_app">Launch last app</string>
+    <!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Google Play</string>
 
-    <!-- AOSP-CAF Version -->
-    <string name="version_title">CAF Version</string>
-    <string name="version_default">Unknown</string>
+    <!-- Advanced night mode tile -->
+    <string name="night_display_category_advanced">Advanced</string>
+    <string name="qs_night_brightness_value_title">Automatic lower brightness</string>
+    <string name="qs_night_brightness_value_dialog">Automatically set low brightness value when enabling Night Light</string>
+    <string name="qs_night_bright_disabled">Don\'t change brightness</string>
+    <string name="qs_night_bright_less">Set low brightness</string>
+    <string name="qs_night_bright_medium">Set medium brightness</string>
+    <string name="qs_night_bright_min">Set minimum brightness</string>
+
+    <!-- [CHAR LIMIT=100] Notification Importance slider: very low importance level description -->
+    <string name="notification_importance_very_low">No full screen interruption, peeking, sound, or vibration. Show at the bottom of the notification list. Hide from lock screen.</string>
+
+    <!-- Notification sound timeout -->
+    <string name="app_notification_sound_timeout_title">Minimum time between notification sounds</string>
+    <string name="app_notification_sound_timeout_summary_template">Allow sounds or vibration no more than once every <xliff:g id="duration">%1$s</xliff:g></string>
+    <string name="app_notification_sound_timeout_value_none">No restriction</string>
+    <string name="app_notification_sound_timeout_value_10_seconds">10 seconds</string>
+    <string name="app_notification_sound_timeout_value_30_seconds">30 seconds</string>
+    <string name="app_notification_sound_timeout_value_1_minute">1 minute</string>
+    <string name="app_notification_sound_timeout_value_5_minutes">5 minutes</string>
+    <string name="app_notification_sound_timeout_value_15_minutes">10 minutes</string>
+    <string name="app_notification_sound_timeout_value_30_minutes">30 minutes</string>
+
+    <!-- Configure Notifications: Title for the Battery light option. [CHAR LIMIT=30] -->
+    <string name="Battery_light_title">Battery light</string>
+    <string name="Battery_light_summary">Switch Battery Charging light ON/OFF</string>
+
+    <!-- Setting checkbox title for root access -->
+    <string name="root_access">Root access</string>
+    <string name="root_access_warning_title">Allow root access?</string>
+    <string name="root_access_warning_message">Allowing apps to request root access is very dangerous and could compromise the security of your system!</string>
+    <string name="root_access_none">Disabled</string>
+    <string name="root_access_apps">Apps only</string>
+    <string name="root_access_adb">ADB only</string>
+    <string name="root_access_all">Apps and ADB</string>
+
+    <!-- Notification importance -->
+    <string name="tuner_full_importance_settings">Power notification controls</string>
+
+    <!-- Gesture Settings -->
+    <!-- Summary text for double twist for camera mode  [CHAR LIMIT=160]-->
+    <string name="double_twist_for_camera_mode_summary_pn">To switch in and out of selfie mode in Google Camera, double-twist when you’re in the app</string>
+
+    <string name="device_gestures_title">Device gestures</string>
+    <string name="device_gestures_summary">Set up extra gestures for your device</string>
+
+    <string name="device_doze_title">Ambient display gestures</string>
+    <string name="device_doze_summary">Set up extra gestures for ambient display mode</string>
+
+    <!-- Double tap for doze -->
+    <string name="double_tap_wake_doze_title">Double-tap to wake on doze</string>
+    <string name="double_tap_wake_doze_summary">Require a double-tap to wake the device on a doze pulse screen</string>
+
+    <!-- Doze pulse options -->
+    <string name="doze_settings">Doze settings</string>
+    <string name="summary_doze_enabled">Enabled</string>
+    <string name="summary_doze_disabled">Disabled</string>
+    <string name="doze_overwrite_value_title">Overwrite defaults</string>
+    <string name="doze_overwrite_value_summary">Allow override of default values with user config</string>
+    <string name="doze_pulse_title">User configurable settings</string>
+    <string name="doze_pulse_duration_in_title">Fade in</string>
+    <string name="doze_pulse_duration_in_summary"></string>
+    <string name="doze_pulse_duration_visible_title">Visible duration</string>
+    <string name="doze_pulse_duration_visible_summary"></string>
+    <string name="doze_pulse_duration_out_title">Fade out</string>
+    <string name="doze_pulse_duration_out_summary"></string>
+    <string name="doze_trigger_pickup_title">Pick up sensor trigger</string>
+    <string name="doze_trigger_pickup_summary_on">Pulse will be triggered by pick up sensor</string>
+    <string name="doze_trigger_pickup_summary_off">Pick up sensor will not be utilized as a trigger</string>
+    <string name="doze_trigger_notification_title">Notification trigger</string>
+    <string name="doze_trigger_notification_summary_on">Pulse will be triggered by notifications</string>
+    <string name="doze_trigger_notification_summary_off">Notifications will not be utilized as a trigger</string>
+    <string name="doze_brightness_level_title">Brightness level</string>
+    <string name="onehundred_ms">100 ms</string>
+    <string name="twofifty_ms">250 ms</string>
+    <string name="fivehundred_ms_default">500 ms (default)</string>
+    <string name="sevenfifty_ms">750 ms</string>
+    <string name="one_second">1 s</string>
+    <string name="onehalf_second">1.5 s</string>
+    <string name="two_second">2 s</string>
+    <string name="twohalf_second">2.5 s</string>
+    <string name="three_second_default">3 s (default)</string>
+    <string name="threehalf_second">3.5 s</string>
+    <string name="four_second">4 s</string>
+    <string name="fourhalf_second">4.5 s</string>
+    <string name="five_second">5 s</string>
+    <string name="doze_notification_color_invert_title">Notification inversion</string>
+    <string name="doze_notification_color_invert_summary_off">Notifications will not be inverted. Use for dark themes.</string>
+    <string name="doze_notification_color_invert_summary_on">Notifications will be inverted. Use for light/stock theme.</string>
+
+    <!-- About UltraCAF -->
+    <string name="About_settings_title">About UltraCAF</string>
+    <string name="About_settings_summary">Get information about Us</string>
+
+    <!-- App Ops Settings -->
+    <string name="app_ops_settings">App ops</string>
+    <string name="app_ops_settings_summary">View or change app permissions</string>
+    <string name="app_ops_cat_location">Location</string>
+    <string name="app_ops_cat_personal">Personal</string>
+    <string name="app_ops_cat_messaging">Messaging</string>
+    <string name="app_ops_cat_media">Media</string>
+    <string name="app_ops_cat_device">Device</string>
+    <string name="app_ops_access_camera">camera</string>
+    <string name="app_ops_access_location">location</string>
+    <string name="app_ops_access_notifications">notifications</string>
+    <string name="app_ops_activate_vpn">VPN</string>
+    <string name="app_ops_auto_start">autostart</string>
+    <string name="app_ops_delete_call_log">delete call log</string>
+    <string name="app_ops_delete_contacts">delete contacts</string>
+    <string name="app_ops_delete_mms">delete MMS</string>
+    <string name="app_ops_delete_sms">delete SMS</string>
+    <string name="app_ops_draw_on_top">draw on top</string>
+    <string name="app_ops_get_usage_stats">get usage stats</string>
+    <string name="app_ops_keep_device_awake">keep awake</string>
+    <string name="app_ops_make_phone_call">make call</string>
+    <string name="app_ops_modify_calendar">update calendar</string>
+    <string name="app_ops_modify_call_log">update call log</string>
+    <string name="app_ops_modify_clipboard">modify clipboard</string>
+    <string name="app_ops_modify_contacts">update contacts</string>
+    <string name="app_ops_modify_settings">update settings</string>
+    <string name="app_ops_mute_unmute_microphone">mute/unmutee mic</string>
+    <string name="app_ops_play_audio">play audio</string>
+    <string name="app_ops_post_notification">post notification</string>
+    <string name="app_ops_project_media">project media</string>
+    <string name="app_ops_read_calendar">read calendar</string>
+    <string name="app_ops_read_call_log">read call log</string>
+    <string name="app_ops_read_clipboard">read clipboard</string>
+    <string name="app_ops_read_contacts">read contacts</string>
+    <string name="app_ops_read_mms">read MMS</string>
+    <string name="app_ops_read_sms">read SMS</string>
+    <string name="app_ops_receive_sms">receive SMS</string>
+    <string name="app_ops_record_audio">record audio</string>
+    <string name="app_ops_send_mms">send MMS</string>
+    <string name="app_ops_send_sms">send SMS</string>
+    <string name="app_ops_toast_window">toast messages</string>
+    <string name="app_ops_use_alarm_volume">alarm volume</string>
+    <string name="app_ops_use_audio_focus">audio focus</string>
+    <string name="app_ops_use_bluetooth_volume">Bluetooth volume</string>
+    <string name="app_ops_use_master_volume">master volume</string>
+    <string name="app_ops_use_media_buttons">media buttons</string>
+    <string name="app_ops_use_media_volume">media volume</string>
+    <string name="app_ops_use_notification_volume">notification volume</string>
+    <string name="app_ops_use_ring_volume">ringtone volume</string>
+    <string name="app_ops_use_vibrate">haptic feedback</string>
+    <string name="app_ops_use_voice_volume">voice call volume</string>
+    <string name="app_ops_write_mms">write MMS</string>
+    <string name="app_ops_write_sms">write SMSe</string>
+    <string name="app_ops_use_fingerprint">fingerprint</string>
+    <string name="app_ops_add_voicemail">voicemail</string>
+    <string name="app_ops_read_phone_state">access phone state</string>
+    <string name="app_ops_scan_wifi">Scan WiFi Networks</string>
+    <string name="app_ops_change_wallpaper">change wallpaper</string>
+    <string name="app_ops_assist_structure">assist structure</string>
+    <string name="app_ops_assist_screenshot">screenshot</string>
+    <string name="app_ops_use_body_sensors">body sensors</string>
+    <string name="app_ops_read_cell_broadcasts">cell broadcasts</string>
+    <string name="app_ops_mock_location">mock location</string>
+    <string name="app_ops_read_external_storage">read ext. stor.</string>
+    <string name="app_ops_write_external_storage">write ext. stor.</string>
+    <string name="app_ops_turn_on_screen">turn screen on</string>
+    <string name="app_ops_get_accounts">device accounts</string>
+    <string name="app_ops_run_in_background">run in background</string>
+
 </resources>

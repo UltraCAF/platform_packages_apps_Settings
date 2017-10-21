@@ -90,6 +90,7 @@
 
     <application android:label="@string/settings_label"
             android:icon="@mipmap/ic_launcher_settings"
+            android:roundIcon="@mipmap/ic_launcher_settings_round"
             android:taskAffinity=""
             android:theme="@style/Theme.Settings"
             android:hardwareAccelerated="true"
@@ -130,8 +131,16 @@
 
         <activity android:name=".Settings$WirelessSettings"
             android:label="@string/header_category_wireless_networks">
-            <intent-filter android:priority="4">
+            <intent-filter android:priority="5">
                 <action android:name="com.android.settings.category.wireless" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Settings$UltraMain"
+            android:label="@string/header_category_ultraman">
+            <intent-filter android:priority="4">
+                <action android:name="com.android.settings.category.system" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -1017,6 +1026,31 @@
                 android:value="true" />
         </activity>
 
+        <activity android:name="Settings$UltraManActivity"
+            android:label="@string/ultraman_title"
+            android:icon="@drawable/ic_ultraman"
+            android:taskAffinity="">
+            <intent-filter android:priority="1">
+                <action android:name="com.ultra.manager.UltraMan" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <intent-filter android:priority="9">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.system" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.ultra.manager.UltraMan" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+        </activity>
+
         <activity android:name="Settings$DisplaySettingsActivity"
                 android:label="@string/display_settings"
                 android:icon="@drawable/ic_settings_display"
@@ -1050,66 +1084,6 @@
                 android:targetActivity="Settings$DisplaySettingsActivity">
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.DisplaySettings" />
-        </activity-alias>
-            <activity android:name="Settings$SMQQtiFeedbackActivity"
-                android:label="@string/qtifeedback_settings_title"
-                android:icon="@drawable/ic_settings_qti_feedback"
-                android:enabled="false"
-                android:taskAffinity="">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter android:priority="5">
-                <action android:name="com.android.settings.action.SETTINGS" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.category"
-                android:value="com.android.settings.category.system" />
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="@string/qtifeedback_intent_action" />
-            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
-                android:value="true" />
-            <meta-data android:name="com.android.settings.summary"
-                android:resource="@string/qtifeedback_settings_subtitle" />
-        </activity>
-
-        <!-- Buttons settings activity -->
-        <activity android:name="Settings$ButtonsSettingsActivity"
-                android:label="@string/buttons_pref_title"
-                android:icon="@drawable/ic_settings_buttons"
-                android:taskAffinity=""
-                android:exported="true">
-            <intent-filter android:priority="1">
-                <action android:name="com.android.settings.BUTTONS_SETTINGS" />
-                <action android:name="android.settings.BUTTONS_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.VOICE_LAUNCH" />
-                <category android:name="com.android.settings.SHORTCUT" />
-            </intent-filter>
-            <intent-filter android:priority="7">
-                <action android:name="com.android.settings.action.SETTINGS" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.device" />
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.ButtonsSettings" />
-            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
-                android:value="true" />
-            <meta-data android:name="com.android.settings.summary"
-                android:resource="@string/buttons_pref_summary" />
-        </activity>
-
-        <!-- Keep compatibility with old shortcuts. -->
-        <activity-alias android:name="ButtonsSettings"
-                android:label="@string/buttons_pref_title"
-                android:exported="true"
-                android:targetActivity="Settings$ButtonsSettingsActivity">
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.ButtonsSettings" />
         </activity-alias>
 
         <activity android:name="Settings$NightDisplaySettingsActivity"
@@ -1436,11 +1410,15 @@
             </intent-filter>
         </activity>
 
-        <!--
         <activity android:name="Settings$AppOpsSummaryActivity"
                 android:label="@string/app_ops_settings"
+                android:icon="@drawable/ic_settings_appops"
                 android:taskAffinity=""
-                android:enabled="false">
+                android:enabled="true">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.applications.AppOpsSummary" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.APP_OPS_SETTINGS" />
@@ -1448,10 +1426,16 @@
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
+            <intent-filter android:priority="9">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.system" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.applications.AppOpsSummary" />
+            <meta-data android:name="com.android.settings.summary"
+                android:resource="@string/app_ops_settings_summary" />
         </activity>
-        -->
 
         <activity android:name="Settings$BackgroundCheckSummaryActivity"
                 android:label="@string/background_check_title"
@@ -3106,6 +3090,18 @@
                 android:resource="@string/wifi_calling_suggestion_summary" />
         </activity>
 
+        <!-- Ambient settings activity. -->
+        <activity android:name="Settings$AmbientSettingsActivity"
+                android:label="@string/doze_settings"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.caf.AmbientSettings" />
+        </activity>
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"
@@ -3219,7 +3215,7 @@
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/gesture_preference_summary" />
         </activity>
-
+      
         <activity android:name="BackupSettingsActivity"
                   android:label="@string/privacy_settings_title"
                   android:icon="@drawable/ic_settings_backup"

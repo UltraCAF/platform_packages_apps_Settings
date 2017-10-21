@@ -22,6 +22,10 @@
 -keep class com.android.settings.display.*FragmentForSetupWizard
 -keep class com.android.settings.display.NightDisplaySettings
 
+# UltraMan
+-keep class com.ultra.manager.**
+
+
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {
   *** onClick*(...);
