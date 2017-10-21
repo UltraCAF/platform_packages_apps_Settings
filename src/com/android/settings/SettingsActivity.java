@@ -386,7 +386,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
-            UltraMan.class.getName()
+            UltraMan.class.getName(),
             ButtonsSettings.class.getName()
     };
 
